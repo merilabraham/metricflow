@@ -4,6 +4,21 @@ This file configures GitHub Copilot's automated review behavior for the `metricf
 
 ---
 
+## Architecture Reference (Read First)
+
+Before reviewing, proposing changes, or searching for where a feature is implemented, consult [docs/copilot/ARCHITECTURE.md](../docs/copilot/ARCHITECTURE.md).
+
+Use it to:
+
+- Understand package boundaries and responsibilities across `metricflow_semantic_interfaces/`, `metricflow_semantics/`, and `metricflow/`.
+- Locate likely implementation areas for specific features before deep code inspection.
+- Identify the corresponding test package for any changed feature area.
+- Detect cross-package boundary violations when evaluating changes.
+
+When a prompt asks where to find, fix, or extend a specific feature, start with the Feature Lookup Index in that document, then confirm with symbol usages and tests.
+
+---
+
 ## Pre-merge Requirements
 
 The following are non-negotiable gates. Flag violations immediately; a PR that fails any of them should not proceed to human review.
